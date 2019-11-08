@@ -29,11 +29,12 @@ function showKalorientabelle()
     $rest = new Rest;
     $userAdmin = $rest->checkIfUserAdmin();
     $kalTable = new Kalorientabelle;
-    if ($userAdmin) {
-        $kalTable->showKalorientabelleForAdmins();
-    } else {
-        $kalTable->showKalorientabelleForUsers();
-    }
+    // if ($userAdmin) {
+    //     $kalTable->showKalorientabelleForAdmins();
+    // } else {
+    //     $kalTable->showKalorientabelleForUsers();
+    // }
+    $kalTable->insertForm();
 }
 
 add_shortcode('Show_Kalorientabelle', 'showKalorientabelle');
